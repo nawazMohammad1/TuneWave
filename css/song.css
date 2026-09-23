@@ -1,0 +1,758 @@
+/* ==================================================
+   TUNEWAVE — SONG PAGE
+   song.css
+   ================================================== */
+
+/* ==================================================
+   GLOBAL
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0f19;
+  color: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ==================================================
+   SONG PAGE
+================================================== */
+
+.song-page {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ==================================================
+   SONG HERO
+================================================== */
+
+.song-hero {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 550px;
+  margin: 60px auto;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(0, 229, 255, 0.07),
+      transparent 35%
+    ),
+    radial-gradient(circle at 80% 50%, rgba(76, 74, 250, 0.08), transparent 35%);
+  border: 1px solid #1e293b;
+  border-radius: 25px;
+}
+
+/* ==================================================
+   SONG COVER
+================================================== */
+
+.song-cover {
+  width: 390px;
+  height: 390px;
+  flex-shrink: 0;
+  padding: 5px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00e5ff, #138ffc, #4c4afa);
+  box-shadow:
+    0 0 45px rgba(0, 229, 255, 0.12),
+    0 0 80px rgba(76, 74, 250, 0.1);
+}
+.song-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ==================================================
+   SONG INFORMATION
+================================================== */
+
+.song-info {
+  flex: 1;
+  background-color: transparent;
+}
+
+.song-label {
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: #00e5ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.song-info h1 span {
+  background: linear-gradient(90deg, #01f3fc, #02c8fb, #306afb, #4c4afa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.song-info h1 {
+  margin-bottom: 8px;
+  background-color: transparent;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.song-artist {
+  margin-bottom: 5px;
+  background-color: transparent;
+  color: #f1f5f9;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.song-details {
+  margin-bottom: 35px;
+  background-color: transparent;
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* ==================================================
+   AUDIO PLAYER
+================================================== */
+
+.audio-player {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 25px;
+}
+
+.audio-player audio {
+  width: 100%;
+  max-width: 500px;
+  height: 45px;
+  accent-color: #00e5ff;
+}
+
+#musicPlayer {
+  display: none;
+}
+/* ==================================================
+   SONG BUTTONS
+================================================== */
+
+.song-buttons {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 15px;
+}
+
+.play-song-btn,
+.album-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 125px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-song-btn {
+  color: #0b0f19;
+  background: linear-gradient(90deg, #00e5ff, #138ffc, #4c4afa);
+  border: none;
+}
+
+.play-song-btn:hover {
+  transform: translateY(-2px);
+  color: #f1f5f9;
+  box-shadow: 0 10px 25px rgba(0, 229, 255, 0.18);
+}
+
+.album-btn {
+  color: #f1f5f9;
+  background: transparent;
+  border: 1px solid #1e293b;
+}
+
+.album-btn:hover {
+  border-color: #00e5ff;
+  background: linear-gradient(90deg, #00e5ff, #138ffc, #4c4afa);
+  color: #0b0f19;
+}
+
+.control-btn {
+  min-width: 60px;
+  padding: 12px 15px;
+
+  background: #111827;
+
+  color: #f1f5f9;
+
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  border-color: #00e5ff;
+  color: #00e5ff;
+
+  transform: translateY(-2px);
+}
+
+.stop-btn:hover {
+  border-color: #ff4d6d;
+  color: #ff4d6d;
+}
+
+/* ==================================================
+   SECTION HEADING
+================================================== */
+
+.section-heading {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 30px;
+}
+
+.section-heading p {
+  margin-bottom: 8px;
+  color: #00e5ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+
+  line-height: 1.2;
+}
+
+.section-heading h2 span {
+  background: linear-gradient(90deg, #00e5ff, #138ffc, #4c4afa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==================================================
+   SONG DETAILS SECTION
+================================================== */
+
+.song-details-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 80px;
+}
+
+.song-description {
+  margin: 0 30px;
+  padding: 30px;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 15px;
+}
+
+.song-description > p {
+  max-width: 850px;
+  background-color: transparent;
+  margin-bottom: 30px;
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.song-description strong {
+  color: #f1f5f9;
+  background-color: transparent;
+}
+
+/* ==================================================
+   SONG META
+================================================== */
+
+.song-meta {
+  display: flex;
+  gap: 70px;
+  padding-top: 25px;
+  background-color: transparent;
+  border-top: 1px solid #1e293b;
+}
+
+.song-meta div {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 4px;
+}
+
+.song-meta span {
+  color: #64748b;
+  font-size: 11px;
+  text-transform: uppercase;
+  background-color: transparent;
+  letter-spacing: 1.5px;
+}
+
+.song-meta strong {
+  color: #f1f5f9;
+  font-size: 14px;
+}
+
+/* ==================================================
+   RELATED MUSIC
+================================================== */
+
+.related-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 100px;
+}
+
+.related-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 30px;
+}
+
+/* ==================================================
+   RELATED CARD
+================================================== */
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #111827;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.related-card:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  transform: translateY(-4px);
+  background: #151c2c;
+}
+
+/* ==================================================
+   RELATED IMAGE
+================================================== */
+
+.related-image {
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.related-card:hover .related-image img {
+  transform: scale(1.08);
+}
+
+.related-image span {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00e5ff, #138ffc, #4c4afa);
+  color: #0b0f19;
+  font-size: 12px;
+}
+
+/* ==================================================
+   RELATED INFORMATION
+================================================== */
+
+.related-info {
+  min-width: 0;
+  background-color: transparent;
+}
+
+.related-info h3 {
+  margin-bottom: 3px;
+  background-color: transparent;
+  color: #f1f5f9;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.related-info p {
+  color: #64748b;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 15px 25px;
+
+    gap: 18px;
+  }
+
+  .navbar-anchor {
+    gap: 8px;
+  }
+
+  .navbar-anchor a {
+    font-size: 13px;
+  }
+
+  .navbar-search input {
+    width: 130px;
+  }
+
+  .song-hero {
+    margin: 40px 20px;
+
+    padding: 40px;
+
+    gap: 45px;
+
+    min-height: 480px;
+  }
+
+  .song-cover {
+    width: 300px;
+    height: 300px;
+  }
+
+  .song-info h1 {
+    font-size: 45px;
+  }
+
+  .song-artist {
+    font-size: 18px;
+  }
+
+  .related-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 650px;
+
+    padding: 15px 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo img {
+    width: 125px;
+  }
+
+  .navbar-anchor {
+    width: 100%;
+
+    justify-content: center;
+
+    order: 4;
+
+    flex-wrap: wrap;
+  }
+
+  .navbar-search {
+    width: 100%;
+
+    justify-content: center;
+
+    order: 3;
+  }
+
+  .navbar-search input {
+    width: 220px;
+  }
+
+  .navbar-buttons {
+    order: 2;
+
+    margin-left: auto;
+  }
+
+  .menu-btn {
+    display: block;
+
+    order: 2;
+  }
+
+  .menu-btn img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* SONG HERO */
+
+  .song-hero {
+    width: 600px;
+
+    margin: 30px 0 0;
+
+    padding: 40px 20px;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 35px;
+
+    border-radius: 0;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .song-cover {
+    width: 300px;
+    height: 300px;
+  }
+
+  .song-info {
+    width: 550px;
+  }
+
+  .song-label {
+    font-size: 10px;
+  }
+
+  .song-info h1 {
+    font-size: 40px;
+  }
+
+  .song-artist {
+    font-size: 17px;
+  }
+
+  .song-details {
+    font-size: 13px;
+  }
+
+  .audio-player {
+    display: flex;
+    justify-content: center;
+  }
+
+  .audio-player audio {
+    width: 500px;
+  }
+
+  .song-buttons {
+    justify-content: center;
+  }
+
+  /* DETAILS */
+
+  .song-details-section {
+    width: 600px;
+
+    padding: 50px 0 60px;
+  }
+
+  .section-heading {
+    width: 500px;
+
+    padding-left: 50px;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .song-description {
+    width: 540px;
+
+    margin-left: 30px;
+
+    padding: 25px;
+  }
+
+  .song-meta {
+    gap: 45px;
+
+    flex-wrap: wrap;
+  }
+
+  /* RELATED */
+
+  .related-section {
+    width: 600px;
+
+    padding-bottom: 70px;
+  }
+
+  .related-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding: 0 20px;
+  }
+
+  .related-card {
+    padding: 12px;
+  }
+
+  .related-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 450px) {
+  .song-page {
+    width: 650px;
+  }
+  .song-hero {
+    padding: 35px 15px;
+    margin-left: 40px;
+  }
+  .song-cover {
+    width: 240px;
+    height: 240px;
+  }
+
+  .song-info {
+    width: 520px;
+  }
+  .song-label {
+    font-size: 20px;
+  }
+  .song-info h1 {
+    font-size: 45px;
+  }
+
+  .song-artist {
+    font-size: 25px;
+  }
+
+  .audio-player audio {
+    width: 460px;
+  }
+
+  .play-song-btn,
+  .album-btn {
+    min-width: 110px;
+    padding: 10px 16px;
+    font-size: 20px;
+  }
+
+  /* DETAILS */
+
+  .song-details-section {
+    width: 600px;
+  }
+
+  .section-heading {
+    width: 600px;
+    margin-left: 50px;
+    padding-left: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 45px;
+  }
+  .song-details-section {
+    margin-left: 50px;
+  }
+
+  .song-description {
+    width: 530px;
+    margin-left: 25px;
+    padding: 20px;
+  }
+
+  .song-description > p {
+    font-size: 25px;
+  }
+
+  .song-meta {
+    gap: 30px;
+  }
+
+  .song-meta span {
+    font-size: 25px;
+  }
+  .song-meta strong {
+    font-size: 25px;
+  }
+  /* RELATED */
+
+  .related-section {
+    width: 600px;
+  }
+
+  .related-container {
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    padding: 0 25px;
+  }
+
+  .related-card {
+    width: 500px;
+  }
+}

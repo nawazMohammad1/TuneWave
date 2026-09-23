@@ -1,0 +1,402 @@
+.explore-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 30px 45px;
+  text-align: center;
+}
+
+.explore-small-text {
+  color: #00e5ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0 0 15px;
+}
+
+.explore-header h1 {
+  color: #f1f5f9;
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.explore-header h1 span {
+  background: linear-gradient(90deg, #00e5ff, #138ffc, #4c4afa);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.explore-description {
+  color: #94a3b8;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ================================
+   MUSIC CATEGORIES
+================================ */
+
+.music-categories {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 55px;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 10px 20px;
+
+  border: 1px solid #1e293b;
+  border-radius: 22px;
+
+  background: #111827;
+  color: #94a3b8;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  border-color: #00e5ff;
+  color: #00e5ff;
+}
+
+.category-btn.active {
+  border-color: transparent;
+
+  background: linear-gradient(90deg, #00e5ff, #138ffc, #4c4afa);
+
+  color: #0b0f19;
+  font-weight: 700;
+}
+
+/* ================================
+   EXPLORE MUSIC
+================================ */
+
+.explore-music {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px 90px;
+}
+
+.explore-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 25px;
+}
+
+.explore-section-heading p {
+  color: #00e5ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 8px;
+}
+
+.explore-section-heading h2 {
+  color: #f1f5f9;
+  font-size: 30px;
+  margin: 0;
+}
+
+.explore-section-heading h2 span {
+  color: #00e5ff;
+}
+
+.track-count {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* ================================
+   MUSIC GRID
+================================ */
+
+.explore-music-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ================================
+   MUSIC CARD
+================================ */
+
+.explore-music-card {
+  padding: 12px;
+
+  background: #151c2c;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+
+  transition: 0.3s ease;
+}
+
+.explore-music-card:hover {
+  transform: translateY(-6px);
+  border-color: #334155;
+  background: #182235;
+}
+
+/* ================================
+   MUSIC IMAGE
+================================ */
+
+.explore-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+  border-radius: 11px;
+}
+
+.explore-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  transition: 0.4s ease;
+}
+
+.explore-music-card:hover .explore-image img {
+  transform: scale(1.06);
+}
+
+/* ================================
+   PLAY BUTTON
+================================ */
+
+.explore-play {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #00e5ff, #138ffc, #4c4afa);
+
+  color: #0b0f19;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition: 0.3s ease;
+}
+
+.explore-music-card:hover .explore-play {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.explore-play:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.3);
+}
+
+/* ================================
+   SONG INFORMATION
+================================ */
+
+.explore-song-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding: 15px 3px 5px;
+}
+
+.explore-song-info h3 {
+  color: #f1f5f9;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  margin: 0 0 5px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explore-song-info p {
+  color: #94a3b8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.explore-song-info > span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* ================================
+   GENRE
+================================ */
+
+.music-genre {
+  display: inline-block;
+
+  margin: 8px 3px 3px;
+  padding: 4px 9px;
+
+  border-radius: 12px;
+
+  background: #111827;
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .explore-music-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .explore-header {
+    padding: 65px 0px 35px;
+    width: 650px;
+  }
+
+  .explore-header h1 {
+    font-size: 42px;
+  }
+
+  .explore-description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .music-categories {
+    padding: 0 20px 45px;
+    width: 650px;
+  }
+
+  .category-list {
+    gap: 8px;
+  }
+
+  .category-btn {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  .explore-music {
+    padding: 0;
+    padding-top: 50px;
+    width: 600px;
+    padding-bottom: 25px;
+  }
+
+  .explore-section-heading {
+    width: 450px;
+    padding-left: 125px;
+  }
+  .explore-section-heading h2 {
+    font-size: 26px;
+  }
+  .explore-music-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding-left: 10px;
+  }
+
+  .explore-play {
+    opacity: 1;
+    transform: translateY(0);
+    width: 38px;
+    height: 38px;
+  }
+  .explore-music-card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 450px) {
+  .explore-header {
+    padding: 50px 15px 30px;
+  }
+
+  .explore-small-text {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .explore-header h1 {
+    font-size: 34px;
+  }
+
+  .music-categories {
+    padding: 0 15px 40px;
+  }
+
+  .category-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+
+  .explore-music {
+    padding: 0 15px 50px;
+  }
+
+  .explore-music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-section-heading {
+    align-items: center;
+  }
+
+  .explore-section-heading h2 {
+    font-size: 23px;
+  }
+
+  .track-count {
+    font-size: 11px;
+  }
+}
